@@ -1,0 +1,105 @@
+# ==============================================================================
+# DATA ENGINEERING PROJECT - .gitignore
+# Purpose:
+#   Exclude raw data, derived data, local environments, and sensitive files
+#   from version control to ensure security and reproducibility.
+# ==============================================================================
+
+
+# ------------------------------------------------------------------------------
+# 1. DATA FILES (NEVER COMMIT)
+# ------------------------------------------------------------------------------
+
+# Raw, cleaned, and intermediate datasets
+data/raw/
+data/clean/
+data/intermediate/
+
+# Common data file formats
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.json
+*.avro
+*.orc
+
+
+# ------------------------------------------------------------------------------
+# 2. LOOKUP / GEO / THIRD-PARTY DATA
+# ------------------------------------------------------------------------------
+
+# Large, licensed, or third-party lookup datasets
+lookup/simplemaps_uszips_basicv1/
+lookup/geoname/
+lookup/geo/
+
+# GIS / shapefile components
+*.shp
+*.dbf
+*.shx
+*.prj
+
+
+# ------------------------------------------------------------------------------
+# 3. GENERATED OUTPUTS / RESULTS
+# ------------------------------------------------------------------------------
+
+# Pipeline outputs and analysis artifacts
+outputs/
+plots/
+results/
+
+
+# ------------------------------------------------------------------------------
+# 4. PYTHON ENVIRONMENT & CACHE
+# ------------------------------------------------------------------------------
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Virtual environments and environment variables
+.env
+.venv/
+venv/
+
+
+# ------------------------------------------------------------------------------
+# 5. OPERATING SYSTEM & EDITOR FILES
+# ------------------------------------------------------------------------------
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE / editor configuration
+.vscode/
+.idea/
+
+
+# ------------------------------------------------------------------------------
+# 6. LOG FILES
+# ------------------------------------------------------------------------------
+
+# Application and pipeline logs
+*.log
+
+
+# ------------------------------------------------------------------------------
+# 7. LOCAL DATABASES & SECURITY FILES
+# ------------------------------------------------------------------------------
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Security keys and certificates
+*.pem
+*.key
+*.crt
